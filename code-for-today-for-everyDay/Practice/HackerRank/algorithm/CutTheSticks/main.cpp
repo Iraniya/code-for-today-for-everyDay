@@ -1,0 +1,28 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main(){
+    int n;
+    cin >> n;
+    vector<int> arr(n);
+    int min;
+    for(int arr_i = 0;arr_i < n;arr_i++){
+       cin >> arr[arr_i];
+       min = min<arr[arr_i]?min:arr[arr_i];
+    }
+    cout<<min;
+
+    for(int arr_i=0;arr_i<n;arr_i++){
+        arr[arr_i]=arr[arr_i]-min;
+
+    }
+    for(int arr_i=0;arr_i<n;arr_i++){
+        cout<< arr[arr_i];//<arr[arr_i]-min;
+
+    }
+    return 0;
+}
