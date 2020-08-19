@@ -214,10 +214,23 @@ func countSwaps(a: [Int]) -> Void {
     print("Last Element: \(newA.last!)")  //n >= 2 so there will always be first and last elements so we can force unwrap it.
 }
 
-countSwaps(a: [3,2,1])
+//countSwaps(a: [3,2,1])
 
 // 2. Complete the maximumToys function below.
 func maximumToys(prices: [Int], k: Int) -> Int {
-
-
+    var k = k
+    var max_toy = 0
+    if prices.count == 0 || k == 0 { return max_toy}
+    
+    let prices = prices.sorted()
+    
+    for toy in prices {
+        k = k - toy
+        if k < 0  { return max_toy}
+        max_toy = max_toy + 1
+    }
+    return max_toy
 }
+
+//let maxToy = maximumToys(prices: [1,12,5,111,200,1000,10], k: 50)
+
