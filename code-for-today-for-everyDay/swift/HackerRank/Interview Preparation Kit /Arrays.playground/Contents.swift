@@ -234,3 +234,29 @@ func maximumToys(prices: [Int], k: Int) -> Int {
 
 //let maxToy = maximumToys(prices: [1,12,5,111,200,1000,10], k: 50)
 
+//============================================//===================
+
+//String Manipulation
+
+// Complete the makeAnagram function below.
+func makeAnagram(a: String, b: String) -> Int {
+    var aDict:[Character: Int] = [:]
+    a.forEach{ aDict[$0,default: 0] += 1 }
+    
+    var bDict:[Character:Int] = [:]
+    b.forEach{ bDict[$0, default: 0] += 1 }
+    
+    var totalNum  = 0
+    
+    for aWord in aDict {
+        if let bWord = bDict[aWord] {
+            
+        } else {
+            
+        }
+    }
+    
+    return 0
+}
+
+let answer = makeAnagram(a: "cde", b: "abc")
